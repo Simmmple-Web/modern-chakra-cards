@@ -1,24 +1,7 @@
 import React from "react";
 // Chakra imports
-import {
-  Avatar,
-  Box,
-  Flex,
-  Button,
-  FormControl,
-  FormLabel,
-  HStack,
-  Input,
-  Icon,
-  Image,
-  Link,
-  Switch,
-  Text,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { Flex, Image, Text, useColorModeValue } from "@chakra-ui/react";
 // Assets
-import { FaApple, FaFacebook, FaGoogle } from "react-icons/fa";
-
 import ProfileBg from "assets/Profile.png";
 import ProfileAvatar from "assets/ProfileImage.png";
 
@@ -49,7 +32,7 @@ function Product() {
           borderRadius='50%'
         />
         <Text
-          fontWeight='bold'
+          fontWeight='600'
           color={mainText}
           textAlign='center'
           fontSize='xl'>
@@ -66,9 +49,8 @@ function Product() {
       <Flex justify='space-between' w='100%' px='36px'>
         <Flex flexDirection='column'>
           <Text
-            fontWeight='bold'
+            fontWeight='600'
             color={mainText}
-            fontWeight='bold'
             fontSize='xl'
             textAlign='center'>
             17
@@ -79,9 +61,8 @@ function Product() {
         </Flex>
         <Flex flexDirection='column'>
           <Text
-            fontWeight='bold'
+            fontWeight='600'
             color={mainText}
-            fontWeight='bold'
             fontSize='xl'
             textAlign='center'>
             9.7k
@@ -92,10 +73,9 @@ function Product() {
         </Flex>
         <Flex flexDirection='column'>
           <Text
-            fontWeight='bold'
-            color={mainText}
-            fontWeight='bold'
+            fontWeight='600'
             fontSize='xl'
+            color={mainText}
             textAlign='center'>
             274
           </Text>
