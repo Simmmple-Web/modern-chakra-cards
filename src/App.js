@@ -333,9 +333,9 @@ function App() {
         </Button>
 
         <Flex>
-          {/* {profileCard}
+          {profileCard}
           {teamsCard}
-          {productCard} */}
+          {productCard}
           {/* <Box me='20px'>
             <Profile />
           </Box>
