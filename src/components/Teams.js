@@ -15,24 +15,19 @@ import {
 // Assets
 import { MdPeople } from "react-icons/md";
 import { IoEllipsisHorizontalSharp } from "react-icons/io5";
-import TeamsBg from "assets/TeamsImage.png";
-import avatar1 from "assets/avatars/avatar1.png";
-import avatar2 from "assets/avatars/avatar2.png";
-import avatar3 from "assets/avatars/avatar3.png";
-import avatar4 from "assets/avatars/avatar4.png";
 
-function Product() {
+function Teams() {
   let boxBg = useColorModeValue("white !important", "#111c44 !important");
   let mainText = useColorModeValue("gray.800", "white");
-  let secondaryText = useColorModeValue("gray.400", "gray.400");
   let iconBox = useColorModeValue("gray.100", "whiteAlpha.200");
+  let iconColor = useColorModeValue("brand.200", "white");
   return (
     <Flex
       borderRadius='20px'
       bg={boxBg}
       p='20px'
       h='345px'
-      w='345px'
+      w={{ base: "315px", md: "345px" }}
       alignItems='center'
       direction='column'>
       <Flex w='100%' mb='18px'>
@@ -44,7 +39,7 @@ function Product() {
           borderRadius='50%'
           me='12px'
           bg={iconBox}>
-          <Icon w='24px' h='24px' as={MdPeople} color='brand.200' />
+          <Icon w='24px' h='24px' as={MdPeople} color={iconColor} />
         </Flex>
         <Text
           my='auto'
@@ -67,11 +62,16 @@ function Product() {
             w='24px'
             h='24px'
             as={IoEllipsisHorizontalSharp}
-            color='brand.200'
+            color={iconColor}
           />
         </Button>
       </Flex>
-      <Image src={TeamsBg} maxW='100%' borderRadius='20px' mb='10px' />
+      <Image
+        src='https://i.ibb.co/KVwmVGW/Teams-Image.png'
+        maxW='100%'
+        borderRadius='20px'
+        mb='10px'
+      />
       <Text
         fontWeight='600'
         color={mainText}
@@ -85,7 +85,7 @@ function Product() {
           <Badge
             borderRadius='9px'
             size='md'
-            bg='green.50'
+            colorScheme='green'
             color='green.400'
             textAlign='center'
             display='flex'
@@ -97,35 +97,21 @@ function Product() {
         <AvatarGroup
           size='sm'
           max={4}
-          color='brand.200'
+          color={iconColor}
           fontSize='9px'
           fontWeight='700'>
-          <Avatar src={avatar1} />
-          <Avatar src={avatar2} />
-          <Avatar src={avatar3} />
-          <Avatar src={avatar4} />
-          <Avatar src={avatar1} />
-          <Avatar src={avatar2} />
-          <Avatar src={avatar3} />
-          <Avatar src={avatar4} />
-          <Avatar src={avatar1} />
-          <Avatar src={avatar2} />
-          <Avatar src={avatar3} />
-          <Avatar src={avatar4} />
-          <Avatar src={avatar1} />
-          <Avatar src={avatar2} />
-          <Avatar src={avatar3} />
-          <Avatar src={avatar4} />
-          <Avatar src={avatar1} />
-          <Avatar src={avatar2} />
-          <Avatar src={avatar3} />
-          <Avatar src={avatar4} />
-          <Avatar src={avatar1} />
-          <Avatar src={avatar2} />
+          <Avatar src='https://i.ibb.co/CmxNdhQ/avatar1.png' />
+          <Avatar src='https://i.ibb.co/cFWc59B/avatar2.png' />
+          <Avatar src='https://i.ibb.co/vLQJVFy/avatar3.png' />
+          <Avatar src='https://i.ibb.co/8mcrvQk/avatar4.png' />
+          <Avatar src='https://i.ibb.co/CmxNdhQ/avatar1.png' />
+          <Avatar src='https://i.ibb.co/cFWc59B/avatar2.png' />
+          <Avatar src='https://i.ibb.co/vLQJVFy/avatar3.png' />
+          <Avatar src='https://i.ibb.co/8mcrvQk/avatar4.png' />
         </AvatarGroup>
       </Flex>
     </Flex>
   );
 }
 
-export default Product;
+export default Teams;

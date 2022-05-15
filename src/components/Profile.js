@@ -1,11 +1,8 @@
 import React from "react";
 // Chakra imports
 import { Flex, Image, Text, useColorModeValue } from "@chakra-ui/react";
-// Assets
-import ProfileBg from "assets/Profile.png";
-import ProfileAvatar from "assets/ProfileImage.png";
 
-function Product() {
+function Profile() {
   let boxBg = useColorModeValue("white !important", "#111c44 !important");
   let mainText = useColorModeValue("gray.800", "white");
   let secondaryText = useColorModeValue("gray.400", "gray.400");
@@ -16,15 +13,19 @@ function Product() {
       bg={boxBg}
       p='20px'
       h='345px'
-      w='345px'
+      w={{ base: "315px", md: "345px" }}
       alignItems='center'
       direction='column'>
-      <Image src={ProfileBg} maxW='100%' borderRadius='20px' />
+      <Image
+        src='https://i.ibb.co/xmP2pS6/Profile.png'
+        maxW='100%'
+        borderRadius='20px'
+      />
       <Flex flexDirection='column' mb='30px'>
         <Image
-          src={ProfileAvatar}
-          mx='auto'
+          src='https://i.ibb.co/B3gYTYs/Profile-Image.png'
           border='5px solid red'
+          mx='auto'
           borderColor={boxBg}
           width='68px'
           height='68px'
@@ -55,7 +56,7 @@ function Product() {
             textAlign='center'>
             17
           </Text>
-          <Text color={secondaryText} fontWeight='500' fontWeight='xs'>
+          <Text color={secondaryText} fontWeight='500'>
             Posts
           </Text>
         </Flex>
@@ -67,7 +68,7 @@ function Product() {
             textAlign='center'>
             9.7k
           </Text>
-          <Text color={secondaryText} fontWeight='500' fontWeight='xs'>
+          <Text color={secondaryText} fontWeight='500'>
             Followers
           </Text>
         </Flex>
@@ -79,7 +80,7 @@ function Product() {
             textAlign='center'>
             274
           </Text>
-          <Text color={secondaryText} fontWeight='500' fontWeight='xs'>
+          <Text color={secondaryText} fontWeight='500'>
             Following
           </Text>
         </Flex>
@@ -88,4 +89,4 @@ function Product() {
   );
 }
 
-export default Product;
+export default Profile;
