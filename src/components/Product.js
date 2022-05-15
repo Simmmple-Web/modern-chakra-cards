@@ -14,23 +14,23 @@ import {
 // Assets
 import { MdTimer, MdVideoLibrary } from "react-icons/md";
 import { IoEllipsisHorizontalSharp } from "react-icons/io5";
-import VenusLogo from "assets/VenusLogo.png";
-import avatar1 from "assets/avatars/avatar1.png";
-import avatar2 from "assets/avatars/avatar2.png";
-import avatar3 from "assets/avatars/avatar3.png";
-import avatar4 from "assets/avatars/avatar4.png";
 
 function Product() {
   let boxBg = useColorModeValue("white !important", "#111c44 !important");
   let secondaryBg = useColorModeValue("gray.50", "whiteAlpha.100");
   let mainText = useColorModeValue("gray.800", "white");
-  let secondaryText = useColorModeValue("gray.400", "gray.400");
   let iconBox = useColorModeValue("gray.100", "whiteAlpha.200");
+  let iconColor = useColorModeValue("brand.200", "white");
   return (
-    <Flex borderRadius='20px' bg={boxBg} h='345px' w='345px' direction='column'>
+    <Flex
+      borderRadius='20px'
+      bg={boxBg}
+      h='345px'
+      w={{ base: "315px", md: "345px" }}
+      direction='column'>
       <Box p='20px'>
         <Flex w='100%' mb='10px'>
-          <Image src={VenusLogo} me='auto' />
+          <Image src='https://i.ibb.co/ZWxRPRq/Venus-Logo.png' me='auto' />
           <Button
             w='38px'
             h='38px'
@@ -43,7 +43,7 @@ function Product() {
               w='24px'
               h='24px'
               as={IoEllipsisHorizontalSharp}
-              color='brand.200'
+              color={iconColor}
             />
           </Button>
         </Flex>
@@ -54,38 +54,24 @@ function Product() {
           <AvatarGroup
             size='sm'
             max={4}
-            color='brand.200'
+            color={iconColor}
             fontSize='9px'
             fontWeight='700'>
-            <Avatar src={avatar1} />
-            <Avatar src={avatar2} />
-            <Avatar src={avatar3} />
-            <Avatar src={avatar4} />
-            <Avatar src={avatar1} />
-            <Avatar src={avatar2} />
-            <Avatar src={avatar3} />
-            <Avatar src={avatar4} />
-            <Avatar src={avatar1} />
-            <Avatar src={avatar2} />
-            <Avatar src={avatar3} />
-            <Avatar src={avatar4} />
-            <Avatar src={avatar1} />
-            <Avatar src={avatar2} />
-            <Avatar src={avatar3} />
-            <Avatar src={avatar4} />
-            <Avatar src={avatar1} />
-            <Avatar src={avatar2} />
-            <Avatar src={avatar3} />
-            <Avatar src={avatar4} />
-            <Avatar src={avatar1} />
-            <Avatar src={avatar2} />
+            <Avatar src='https://i.ibb.co/CmxNdhQ/avatar1.png' />
+            <Avatar src='https://i.ibb.co/cFWc59B/avatar2.png' />
+            <Avatar src='https://i.ibb.co/vLQJVFy/avatar3.png' />
+            <Avatar src='https://i.ibb.co/8mcrvQk/avatar4.png' />
+            <Avatar src='https://i.ibb.co/CmxNdhQ/avatar1.png' />
+            <Avatar src='https://i.ibb.co/cFWc59B/avatar2.png' />
+            <Avatar src='https://i.ibb.co/vLQJVFy/avatar3.png' />
+            <Avatar src='https://i.ibb.co/8mcrvQk/avatar4.png' />
           </AvatarGroup>
         </Box>
       </Box>
       <Flex
         bg={secondaryBg}
         w='100%'
-        p='14px 20px'
+        p='20px'
         borderBottomLeftRadius='inherit'
         borderBottomRightRadius='inherit'
         height='100%'
